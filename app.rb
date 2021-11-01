@@ -6,14 +6,7 @@ get '/' do
   "Cats"
 end
 
-get '/secret' do
-  "shhh it's a secret"
+get '/cat' do
+  "<img src=\"https://i.imgur.com/jFaSxym.png\" style=\"border: dashed red;\">"
 end
 
-get '/a' do
-  "we are in a"
-end
-
-get '/b' do
-  "in b"
-end
