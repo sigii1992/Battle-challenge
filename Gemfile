@@ -7,4 +7,6 @@ ruby '2.7.3'
 group :development do
   gem "sinatra"
   gem "sinatra-contrib"
+  gem "capybara"
+  gem "selenium-webdriver"
 end
