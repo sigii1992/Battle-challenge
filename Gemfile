@@ -9,4 +9,5 @@ group :development do
   gem "sinatra-contrib"
   gem "capybara"
   gem "selenium-webdriver"
+  gem "rspec"
 end
