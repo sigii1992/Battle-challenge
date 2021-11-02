@@ -4,6 +4,9 @@ feature 'entering names' do
     fill_in :name1, with: 'Bob'
     fill_in :name2, with: 'Larry'
     click_button 'Submit names'
+
+    save_and_open_page 
+
     expect(page).to have_text('Welcome Bob and Larry')
   end
 end

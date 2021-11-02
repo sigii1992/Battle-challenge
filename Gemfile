@@ -10,4 +10,5 @@ group :development do
   gem "capybara"
   gem "selenium-webdriver"
   gem "rspec"
+  gem "launchy"
 end
