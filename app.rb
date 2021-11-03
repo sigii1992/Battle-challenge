@@ -1,6 +1,6 @@
 require 'sinatra/base'
 require "sinatra/reloader" 
-require 'player'
+require './lib/player.rb'
 
 class Battle < Sinatra::Base
   enable :sessions
