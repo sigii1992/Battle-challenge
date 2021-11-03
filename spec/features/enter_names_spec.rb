@@ -10,3 +10,4 @@ feature 'entering names' do
     expect(page).to have_text('Welcome Bob and Larry')
   end
 end
+
