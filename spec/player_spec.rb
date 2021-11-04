@@ -12,12 +12,6 @@ describe Player do
       expect(player_1.points).to eq Player::HIT_POINTS
    end
 
-   describe '#attack' do
-      it "should attack another player" do
-         expect(player_2).to receive(:reduce_points)
-         player_1.attack(player_2)
-      end
-   end
 
    describe '#reduce_points' do
       it 'should reduce player_2 points by 10' do
