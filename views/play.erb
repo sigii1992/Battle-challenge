@@ -1,5 +1,5 @@
 <h1>Welcome <%= @name1 %> and <%= @name2 %></h1>
-<%= @name2 %>: 50 Hit points
+<%= @name2 %>: <%= @name2.points %> Hit points
 
 <div>
   <form action="/attack">
@@ -7,4 +7,3 @@
   </form>
 </div>
 
-<%= @name2 %>: 40 Hit points
