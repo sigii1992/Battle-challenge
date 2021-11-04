@@ -1,14 +1,26 @@
 require 'game'
 
 describe Game do
-  let(:player_1) { double :player }
-  let(:player_2) { double :player }
+  subject(:game) { Game.new(player1, player2) }
+  let(:player1) { double :player }
+  let(:player2) { double :player }
 
-  describe '#attack' do
-    it "should attack another player" do
-      expect(player_2).to receive(:reduce_points)
-      subject.attack(player_2)
+  describe '#player1' do
+    it 'should have player1' do
+      expect(game.player1).to eq player1
+    end
+  end
+  
+  describe '#player2' do
+    it 'should have player2' do
+      expect(game.player2).to eq player2
     end
   end
 
+  describe '#attack' do
+    it "should attack another player" do
+      expect(player2).to receive(:reduce_points)
+      game.attack(player2)
+    end
+  end
 end
