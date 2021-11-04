@@ -11,8 +11,8 @@ feature 'Win a game of Battle' do
       click_button 'ATTACK!!!'
       click_link 'Go back to battle!'
       # visit '/play'
-      expect(page).not_to have_text('Larry: 50 Hit points')
-      expect(page).to have_text('Larry: 40 Hit points')
+      expect(page).not_to have_text('Larry: 100 Hit points')
+      expect(page).to have_text('Larry: 90 Hit points')
     end
   
 end

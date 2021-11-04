@@ -15,3 +15,4 @@ class Player
   @points -= 10
  end
 end 
+
