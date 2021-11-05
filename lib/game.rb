@@ -7,11 +7,7 @@ class Game
   end
 
   def change_player
-    @swapped_player =
-      @players.select do |player|
-        @current_player = player if @current_player != player
-      end
-    # @players.each { |player| player if player != @current_player }
+    @players.select { |player| player != @current_player }
   end
 
   def player1
