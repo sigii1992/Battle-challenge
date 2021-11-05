@@ -39,3 +39,17 @@ As a Player,
 So I can Lose a game of Battle,
 I want to see a 'Lose' message if I reach 0HP first
 ```
+
+# Technologies used:
+* Git
+* GitHub
+* Ruby
+* Rspec
+* Sinatra
+* Capybara
+
+# You can run the test using:
+```
+bundle install
+rspec
+```
