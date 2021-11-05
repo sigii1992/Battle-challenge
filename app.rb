@@ -1,5 +1,5 @@
 require 'sinatra/base'
-require "sinatra/reloader" 
+require 'sinatra/reloader'
 require './lib/player.rb'
 require './lib/game.rb'
 
@@ -29,9 +29,10 @@ class Battle < Sinatra::Base
   get '/attack' do
     @game = $game
     @game.attack(@game.player2)
-    p @game.change_player
+    p "The player should be #{@game.change_player}"
+    @game.change_player
     erb(:attack)
   end
 
-  run! if app_file ==$0
+  run! if app_file == $0
 end

@@ -7,7 +7,11 @@ class Game
   end
 
   def change_player
-    @players.select {|player| @current_player = player if @current_player != player }
+    @swapped_player =
+      @players.select do |player|
+        @current_player = player if @current_player != player
+      end
+    # @players.each { |player| player if player != @current_player }
   end
 
   def player1
@@ -20,5 +24,5 @@ class Game
 
   def attack(player)
     player.reduce_points
-  end    
+  end
 end
