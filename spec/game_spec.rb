@@ -33,7 +33,7 @@ describe Game do
   describe '#change_player' do
     it 'switches the turn' do
       game.change_player
-      expect(game.current_player).to eq player22
+      expect(game.current_player).to eq player2
     end
   end
 end

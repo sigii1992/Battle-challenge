@@ -1,6 +1,11 @@
 <div>
-  <p><%= @game.player1.name %> just attacked <%= @game.player2.name %>!</p>
-  <a href='/play'>
-  Go back to battle!
-  </a>
+<% if @game.current_player == @game.player1 %>
+<%= @game.player1.name %> just attacked <%= @game.player2.name %>!
+<% else %>
+<%= @game.player2.name %> just attacked <%= @game.player1.name %>!
+<% end %>
+  
+  <form action="/change-turns" method="post">
+    <input type="submit" value="Go back to battle!">
+  </form>
 </div>
