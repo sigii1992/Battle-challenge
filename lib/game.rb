@@ -6,12 +6,9 @@ class Game
     @current_player = player1
   end
 
-  # def change_player
-  #   # @players.select do |player|
-  #   #   return @current_player = player if @current_player != player
-  #   # end
-  #   @players.each { |player| return player if player != @current_player }
-  # end
+  def change_player
+    @current_player = opponent_of(current_player)
+  end
 
   def player1
     @players.first
@@ -23,11 +20,6 @@ class Game
 
   def attack(player)
     player.reduce_points
-  end
-
-  #testing workthrough code....... trying to change players
-  def change_player
-    @current_turn = opponent_of(current_turn)
   end
 
   private
